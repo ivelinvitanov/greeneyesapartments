@@ -1,0 +1,284 @@
+/* Global styles */
+body {
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #45a049;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/terasa2.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+.hero-content h2 {
+    margin-bottom: 20px; /* Add spacing between the heading and the text below */
+}
+
+.hero-content p {
+    margin-bottom: 40px; /* Adjust this value to move the text upward from the button */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the text */
+}
+
+/* Button Styling */
+/* General Button Styling */
+/* General Button Styling */
+/* General Button Styling */
+.cta-button {
+    background-color: #4CAF50;
+    background-image: linear-gradient(to bottom, #4CAF50, #388E3C);
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 50px; /* Fully rounded corners */
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.555); /* More visible green shadow */
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Ensure the link states are styled correctly */
+.cta-button:link,
+.cta-button:visited {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover state */
+.cta-button:hover {
+    background-color: #45a049;
+    background-image: linear-gradient(to bottom, #45a049, #388E3C);
+    transform: scale(1.05);
+    box-shadow: 0 12px 20px rgba(156, 226, 156, 0.7); /* More intense green shadow on hover */
+    color: white;
+}
+
+/* Active state (when button is clicked) */
+.cta-button:active {
+    background-color: #388E3C;
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.5); /* Reduce shadow on click */
+}
+
+
+
+
+/* Main Sections */
+.about, .apartments, .contact {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#about {
+    background-color: #f0f9f0; /* Light green background for a fresh look */
+    padding: 50px 20px; /* Add padding around the section for spacing */
+    text-align: center; /* Center-align the text */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    max-width: 1000px; /* Constrain width */
+    margin: 50px auto; /* Center the section horizontally */
+}
+
+#about h2 {
+    font-size: 2.5em; /* Larger heading */
+    color: #4CAF50; /* Darker green color to match the theme */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#about p {
+    font-size: 1.3em; /* Slightly larger text for readability */
+    line-height: 1.8; /* Increase line height for better spacing */
+    color: #333; /* Darker text color for readability */
+    max-width: 800px; /* Constrain text width */
+    margin: 0 auto; /* Center-align the text content */
+}
+
+#about::before {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #4CAF50; /* Decorative green line above the section */
+    margin: 0 auto 20px auto; /* Center the decorative line */
+    border-radius: 2px;
+}
+
+/* Apartment Section */
+.apartment-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.apartment {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    position: relative;
+    height: 400px; /* Adjust this value based on your desired card height */
+    text-decoration: none;
+}
+
+.apartment img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes sure the image fills the container */
+    display: block;    /* Removes any extra space under the image */
+}
+
+.apartment h3 {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: rgb(7, 0, 0);
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.apartment p {
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content {
+        padding: 20px;
+        font-size: 1.1em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .apartment {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .apartment {
+        width: 100%;
+    }
+
+    .about, .apartments, .contact {
+        padding: 10px;
+    }
+}
+
+/* Global rule to remove underline from all anchor tags */
+a {
+    text-decoration: none;
+}
